@@ -1,0 +1,43 @@
+[data] 20,000 files, malicious rate 0.255, train 15,000 / test 5,000, 29 features
+[cv]
+              model  cv_roc_auc_mean  cv_roc_auc_std  cv_f1_mean  cv_f1_std
+      Rule baseline           0.8250          0.0034      0.6599     0.0068
+Logistic regression           0.9185          0.0039      0.8055     0.0048
+      Random forest           0.9323          0.0035      0.8489     0.0062
+  Gradient boosting           0.9423          0.0042      0.8500     0.0056
+[test]
+              model  accuracy  precision  recall     f1  roc_auc  pr_auc  tpr_at_1pct_fpr
+      Rule baseline    0.8128     0.6048  0.7706 0.6777   0.8264  0.6217           0.0983
+Logistic regression    0.9104     0.9076  0.7228 0.8047   0.9220  0.8710           0.6656
+      Random forest    0.9298     0.9401  0.7745 0.8493   0.9350  0.8988           0.7533
+  Gradient boosting    0.9302     0.9496  0.7674 0.8489   0.9397  0.9020           0.7596
+[per-template flag rate]
+                   n_test  label_rate  Rule baseline  Logistic regression  Random forest  Gradient boosting
+template                                                                                                   
+benign_common        3102       0.012          0.050                0.006          0.008              0.007
+benign_compound       135       0.015          0.178                0.037          0.015              0.000
+benign_installer      277       0.011          0.874                0.029          0.004              0.007
+benign_risky_type     239       0.000          0.908                0.213          0.092              0.071
+mal_container         234       0.996          0.705                0.684          0.756              0.769
+mal_double_ext        287       0.976          1.000                1.000          1.000              1.000
+mal_lure_exec         271       0.985          1.000                0.996          1.000              1.000
+mal_random_name       234       1.000          0.944                0.885          0.974              0.979
+mal_size_anomaly       83       1.000          0.506                0.133          0.434              0.301
+mal_stealthy          138       0.993          0.029                0.000          0.014              0.000
+[evasion recall]
+                       Rule baseline  Logistic regression  Random forest  Gradient boosting
+attack                                                                                     
+None (original)                0.794                0.750          0.803              0.796
+Drop decoy extension           0.789                0.711          0.738              0.743
+Benign-looking rename          0.694                0.460          0.294              0.350
+Pad size to 10-100 MB          0.794                0.266          0.666              0.607
+Wrap in archive                0.496                0.858          0.755              0.848
+Rename + wrap + pad            0.055                0.000          0.000              0.002
+[seed stability, 5 seeds]
+                     accuracy_mean  accuracy_std  precision_mean  precision_std  recall_mean  recall_std  f1_mean  f1_std  roc_auc_mean  roc_auc_std
+model                                                                                                                                               
+Rule baseline               0.8042        0.0067          0.5903         0.0107       0.7607      0.0117   0.6647  0.0099        0.8189       0.0074
+Logistic regression         0.9059        0.0024          0.9022         0.0074       0.7081      0.0124   0.7934  0.0067        0.9187       0.0040
+Random forest               0.9274        0.0030          0.9450         0.0045       0.7595      0.0098   0.8421  0.0068        0.9373       0.0042
+Gradient boosting           0.9290        0.0019          0.9568         0.0043       0.7561      0.0088   0.8446  0.0047        0.9445       0.0029
+[timing] feature extraction 23.5 us/file; total pipeline 52.4s

@@ -1,0 +1,6 @@
+{
+  "feature_extraction_us_per_file": 23.51,
+  "pipeline_wall_seconds": 52.4,
+  "n_samples": 20000,
+  "seed": 42
+}
