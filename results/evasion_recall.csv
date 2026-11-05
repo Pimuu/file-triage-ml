@@ -1,0 +1,7 @@
+attack,Rule baseline,Logistic regression,Random forest,Gradient boosting
+None (original),0.7939,0.7498,0.8027,0.7955
+Drop decoy extension,0.7891,0.7113,0.7378,0.7426
+Benign-looking rename,0.6945,0.4603,0.2943,0.3504
+Pad size to 10-100 MB,0.7939,0.2662,0.6664,0.6071
+Wrap in archive,0.4956,0.8581,0.7554,0.8484
+Rename + wrap + pad,0.0553,0.0000,0.0000,0.0024

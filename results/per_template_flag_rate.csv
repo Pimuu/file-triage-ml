@@ -1,0 +1,11 @@
+template,n_test,label_rate,Rule baseline,Logistic regression,Random forest,Gradient boosting
+benign_common,3102,0.0123,0.0496,0.0058,0.0084,0.0068
+benign_compound,135,0.0148,0.1778,0.0370,0.0148,0.0000
+benign_installer,277,0.0108,0.8736,0.0289,0.0036,0.0072
+benign_risky_type,239,0.0000,0.9079,0.2134,0.0921,0.0711
+mal_container,234,0.9957,0.7051,0.6838,0.7564,0.7692
+mal_double_ext,287,0.9756,1.0000,1.0000,1.0000,1.0000
+mal_lure_exec,271,0.9852,1.0000,0.9963,1.0000,1.0000
+mal_random_name,234,1.0000,0.9444,0.8846,0.9744,0.9786
+mal_size_anomaly,83,1.0000,0.5060,0.1325,0.4337,0.3012
+mal_stealthy,138,0.9928,0.0290,0.0000,0.0145,0.0000

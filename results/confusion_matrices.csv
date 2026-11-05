@@ -1,0 +1,5 @@
+model,tn,fp,fn,tp
+Rule baseline,3080,643,293,984
+Logistic regression,3629,94,354,923
+Random forest,3660,63,288,989
+Gradient boosting,3671,52,297,980

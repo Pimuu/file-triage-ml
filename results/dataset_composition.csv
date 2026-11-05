@@ -1,0 +1,11 @@
+template,count
+benign_common,12270
+mal_double_ext,1190
+benign_installer,1152
+mal_lure_exec,1022
+benign_risky_type,991
+mal_random_name,920
+mal_container,891
+mal_stealthy,599
+benign_compound,587
+mal_size_anomaly,378
